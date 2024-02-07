@@ -1,16 +1,34 @@
 # arindamaui
 
-A new Flutter project.
+Proyek 4 oleh:
+Agam Andika (221511001)
+Muhammad Jalaludin Qurthubi (221511021)
+Ridha Septiaji (221511028)
 
-## Getting Started
+## Latest screenshot(s)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How to operate
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Clone the project into your machine
+
+`git clone https://github.com/thisisjackii/arindamaui.git`
+
+Navigate into project directory
+
+`cd arindamaui`
+
+Install dependencies
+
+`flutter pub get`
+
+Run the project with
+
+`flutter run`
+
+or using your favorite IDE.
+
+Make sure to get all the toolkits and SDKs set.
+
+@Arindama 2024
