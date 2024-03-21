@@ -74,8 +74,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                   opacity: 0.3,
                   child: Icon(Icons.person),
                 ),
-                hintText: 'Nama Lengkap', // Set the placeholder text
-                // You can also customize other decoration properties as needed
+                hintText: 'Nama Lengkap',
               ),
             ),
             const SizedBox(height: 20),
@@ -100,8 +99,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                   opacity: 0.3,
                   child: Icon(Icons.person),
                 ),
-                hintText: 'Username', // Set the placeholder text
-                // You can also customize other decoration properties as needed
+                hintText: 'Username',
               ),
             ),
             const SizedBox(height: 20),
@@ -126,8 +124,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                   opacity: 0.3,
                   child: Icon(Icons.mail),
                 ),
-                hintText: 'Email', // Set the placeholder text
-                // You can also customize other decoration properties as needed
+                hintText: 'Email',
               ),
             ),
             const SizedBox(height: 20),
@@ -215,7 +212,7 @@ class RegisterScreenState extends State<RegisterScreen> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // Implement login logic
+
                 },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFBB0022)),
@@ -243,7 +240,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 10), // Add some space between the texts
+                SizedBox(height: 10),
                 TextButton(
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, '/login');

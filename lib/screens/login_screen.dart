@@ -46,8 +46,7 @@ class LoginScreen extends StatelessWidget {
                     opacity: 0.3,
                     child: Icon(Icons.person),
                   ),
-                  hintText: 'Email or Username', // Set the placeholder text
-                  // You can also customize other decoration properties as needed
+                  hintText: 'Email or Username',
                 ),
               ),
 
@@ -104,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Implement login logic
+
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFBB0022)),
@@ -121,12 +120,6 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              // ElevatedButton(
-              //   onPressed: () {
-              //     // Implement login logic
-              //   },
-              //   child: const Text('Login'),
-              // ),
               const SizedBox(height: 20),
               Column(
                 children: [
@@ -139,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10), // Add some space between the texts
+                  SizedBox(height: 10),
                   TextButton(
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, '/register');
@@ -151,21 +144,10 @@ class LoginScreen extends StatelessWidget {
                           FontVariation('wght', 800),
                         ],
                       ),
-
                     ),
                   ),
                 ],
               ),
-
-
-              // TextButton(
-              //   onPressed: () {
-              //     Navigator.pushReplacementNamed(context, '/register');
-              //   },
-              //   child: Text(
-              //       'Don\'t have an account yet? Register',
-              //       style: Theme.of(context).textTheme.bodyText2,),
-              // ),
             ],
           ),
         ),
