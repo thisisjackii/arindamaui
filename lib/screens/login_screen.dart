@@ -25,14 +25,60 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+
+              Align(
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  'Username',
+                  style: TextStyle(
+                    fontVariations: [
+                      FontVariation(
+                        'wght',
+                        600,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               const TextField(
-                decoration: InputDecoration(labelText: 'Email or Username'),
+                decoration: InputDecoration(
+                  prefixIcon: Opacity(
+                    opacity: 0.3,
+                    child: Icon(Icons.person),
+                  ),
+                  hintText: 'Email or Username', // Set the placeholder text
+                  // You can also customize other decoration properties as needed
+                ),
               ),
 
+
               const SizedBox(height: 20),
+
+              Align(
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  'Kata Sandi',
+                  style: TextStyle(
+                    fontVariations: [
+                      FontVariation(
+                        'wght',
+                        600,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+
               const TextField(
                 obscureText: true,
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(
+                    hintText: 'Password',
+                    prefixIcon: Opacity(
+                      opacity: 0.3,
+                      child: Icon(Icons.lock),
+                  ),
+                ),
               ),
               const SizedBox(height: 20),
 
@@ -70,7 +116,8 @@ class LoginScreen extends StatelessWidget {
                         FontVariation(
                             'wght', (700))
                       ],
-                    ),),
+                    ),
+                  ),
                 ),
               ),
 

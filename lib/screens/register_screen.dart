@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -34,68 +36,235 @@ class RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Register'),
+        title: const Text('Daftar',
+          style: TextStyle(
+            fontVariations: [
+              FontVariation(
+                  'wght', (800))
+            ],
+          ),
+        ),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const TextField(
-              decoration: InputDecoration(
-                labelText: 'Name',
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'Nama Lengkap',
+                style: TextStyle(
+                  fontVariations: [
+                    FontVariation(
+                      'wght',
+                      600,
+                    ),
+                  ],
+                ),
               ),
             ),
+
             const TextField(
               decoration: InputDecoration(
-                labelText: 'Username',
+                prefixIcon: Opacity(
+                  opacity: 0.3,
+                  child: Icon(Icons.person),
+                ),
+                hintText: 'Nama Lengkap', // Set the placeholder text
+                // You can also customize other decoration properties as needed
               ),
             ),
-            const TextField(
-              decoration: InputDecoration(
-                labelText: 'Email',
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'Username',
+                style: TextStyle(
+                  fontVariations: [
+                    FontVariation(
+                      'wght',
+                      600,
+                    ),
+                  ],
+                ),
               ),
             ),
+
             const TextField(
               decoration: InputDecoration(
-                labelText: 'Password',
+                prefixIcon: Opacity(
+                  opacity: 0.3,
+                  child: Icon(Icons.person),
+                ),
+                hintText: 'Username', // Set the placeholder text
+                // You can also customize other decoration properties as needed
               ),
+            ),
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'Email',
+                style: TextStyle(
+                  fontVariations: [
+                    FontVariation(
+                      'wght',
+                      600,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            const TextField(
+              decoration: InputDecoration(
+                prefixIcon: Opacity(
+                  opacity: 0.3,
+                  child: Icon(Icons.mail),
+                ),
+                hintText: 'Email', // Set the placeholder text
+                // You can also customize other decoration properties as needed
+              ),
+            ),
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'Kata Sandi',
+                style: TextStyle(
+                  fontVariations: [
+                    FontVariation(
+                      'wght',
+                      600,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+
+            const TextField(
               obscureText: true,
-            ),
-            const TextField(
               decoration: InputDecoration(
-                labelText: 'Confirm Password',
+                hintText: 'Ketikan Kata Sandi',
+                prefixIcon: Opacity(
+                  opacity: 0.3,
+                  child: Icon(Icons.lock),
+                ),
               ),
+            ),
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'Konfirmasi Kata Sandi',
+                style: TextStyle(
+                  fontVariations: [
+                    FontVariation(
+                      'wght',
+                      600,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+
+            const TextField(
               obscureText: true,
+              decoration: InputDecoration(
+                hintText: 'Konfirmasi Kata Sandi',
+                prefixIcon: Opacity(
+                  opacity: 0.3,
+                  child: Icon(Icons.lock),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'Tanggal Lahir',
+                style: TextStyle(
+                  fontVariations: [
+                    FontVariation(
+                      'wght',
+                      600,
+                    ),
+                  ],
+                ),
+              ),
             ),
             InkWell(
               onTap: () => _selectDate(context),
               child: InputDecorator(
                 decoration: const InputDecoration(
-                  labelText: 'Birthdate',
+                  hintText: 'TTL',
                 ),
                 child: Text(
                   '${selectedDate.toLocal()}'.split(' ')[0],
                 ),
               ),
             ),
-            const SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () {
-                // Implement registration logic
-              },
-              child: const Text('Register'),
+            const SizedBox(height: 20.0),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {
+                  // Implement login logic
+                },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFBB0022)),
+                  foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+                ),
+                child: const Text('Daftar',
+                  style: TextStyle(
+                    fontVariations: [
+                      FontVariation(
+                          'wght', (700))
+                    ],
+                  ),
+                ),
+              ),
             ),
-            const SizedBox(height: 16.0),
-            TextButton(
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, '/login');
-              },
-              child: const Text('Already have an account? Login'),
+            const SizedBox(height: 20),
+            Column(
+              children: [
+                Text(
+                  'Sudah Punya Akun?',
+                  style: TextStyle(
+                    fontVariations: [
+                      FontVariation(
+                          'wght', (500))
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10), // Add some space between the texts
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, '/login');
+                  },
+                  child: Text(
+                    'Login disini',
+                    style: Theme.of(context).textTheme.button!.copyWith(
+                      fontVariations: [
+                        FontVariation('wght', 800),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
+         ),
         ),
       ),
     );
   }
 }
+
+
