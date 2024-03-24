@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:arindamaui/screens/home_screen.dart';
 import 'package:arindamaui/screens/login_screen.dart';
 import 'package:arindamaui/screens/register_screen.dart';
+import 'package:arindamaui/screens/main_menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // debugDumpApp();
     return MaterialApp(
       title: 'Your App',
       initialRoute: '/',
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomeScreen(),
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
+        '/main-menu': (context) => const MainMenu(),
       },
       theme: ThemeData(
         // Define the custom font family
